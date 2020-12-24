@@ -3,9 +3,9 @@ import time
 
 import pygame as pg
 
-score, high_score = (0, 0)
+score = 0
+high_score = 0
 
-# Цвета
 red = pg.Color(255, 0, 0)
 green = pg.Color(0, 255, 0)
 black = pg.Color(0, 0, 0)
@@ -155,7 +155,7 @@ def play_game(fd, p):
         if fd.is_eaten(p.head):
             fd.new_pos()
             p.add_unit()
-            score += 10
+            score += 1
         if p.is_collision():
             run = False
             game_over()
